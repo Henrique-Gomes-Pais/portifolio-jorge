@@ -27,7 +27,7 @@ body{
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    transition: 02.s;
+    transition: 0.2s;
 }
 
 h2.titulo{
@@ -60,10 +60,10 @@ header a{
     color: rgb(161, 161, 161);
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
     color: #FFF;
     transform: scale(1.05);
 }
@@ -72,9 +72,72 @@ header nav ul{
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
+}
+
+/* ESTILO DO MENU MOBILE */
+.dv-abrir-menu i{
+    color: #00FF08;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    display:block;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .dv-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .dv-fechar i{
+    color: #00FF08;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #00FF08;
+    color: black;
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
 }
 
 /* ESTILO TOPO DO SITE */
@@ -134,7 +197,7 @@ section.especialidades .flex{
     border-radius: 20px;
     border: 2px solid #FFF;
     margin-top: 45px; 
-    transition: .2s;  
+    transition: 0.2s;  
     cursor: pointer;
 }
 
@@ -269,4 +332,71 @@ footer .line-footer p i{
 
 footer .line-footer p a{
     color: #FFF;
+}
+
+@media screen and (max-width:1020px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+    
+    h2.titulo{
+    font-size: 30px;
+    line-height: 35px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop, .dv-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site .flex{
+    gap: 90px;
+    }
+    section.topo-do-site{
+    padding: 40px 4%;
+    }
+
+    .topo-do-site h1{
+    font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+    width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+    section.especialidades{
+    padding: 40px 8%;
+    }
+
+    /* SOBRE */
+
+section.sobre{
+    padding: 80px 4%;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 34px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.dv-social{
+    text-align: center;
+}
+
+.img-sobre img{
+    width: 100%;
+}
+
+/* RODAPÉ */
+footer .flex{
+    flex-direction: column;
+}
+
+footer .line-footer{
+    text-align: center;
+}
 }
