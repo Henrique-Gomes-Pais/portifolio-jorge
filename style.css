@@ -30,7 +30,22 @@ body{
     transition: 02.s;
 }
 
-/* ESTILO DO CABEcÇALHO */
+h2.titulo{
+    color: #FFF;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #00FF08;
+}
+
+button:hover, form .dv-enviar input:hover{
+    box-shadow: 0px 0px 8px #00FF08;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
 header{
     padding: 40px 4%;
 }
@@ -60,11 +75,6 @@ header nav ul{
 header nav ul li{
     display: inline-block;
     padding: 0 40px;
-}
-
-.dv-contato button:hover{
-    box-shadow: 0px 0px 8px #00FF08;
-    transform: scale(1.05);
 }
 
 /* ESTILO TOPO DO SITE */
@@ -107,4 +117,156 @@ section.topo-do-site .flex{
     100%{
         top:30px;
     }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #FFF;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    margin-top: 45px; 
+    transition: .2s;  
+    cursor: pointer;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #ffffff73;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #00FF08;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+/* ESTILO SOBRE */
+
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #FFF;
+}
+
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height:40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #00FF08;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.dv-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00FF08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(83, 83, 83, 0.773);
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 250px;
+}
+
+form .dv-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .dv-enviar input{
+    width: 120px;
+    background-color: #00FF08;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 5px 0;
+}
+
+.second{
+    border-top: 2px solid #00FF08;
+}
+
+footer .line-footer p i{
+    color: #00FF08;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #FFF;
 }
